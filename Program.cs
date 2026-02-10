@@ -5,6 +5,8 @@ using System.Text;
 using StudentEnrollmentApi.Data;
 using StudentEnrollmentApi.Models;  
 using Microsoft.AspNetCore.Identity;
+using StudentEnrollmentApi.Services;
+using StudentEnrollmentApi.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,11 +18,15 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ApplicationDBContext>(options =>
     options.UseSqlServer(connectionString));
 
+
+// 3. Register the StudentService for dependency injection
+builder.Services.AddScoped<IStudentService, StudentService>();
     
 // now adding the identity system to the application
 builder.Services.AddIdentity< User , IdentityRole>()
 .AddEntityFrameworkStores<ApplicationDBContext>()
 .AddDefaultTokenProviders();
+
 
 
 var jwtKey = builder.Configuration["JWT:Key"];
@@ -55,6 +61,10 @@ builder.Services.AddAuthentication(options =>
 // This tells that hami sangha controller chha jasle request handle garchha ra response pathauncha
 builder.Services.AddControllers(); 
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(); 
+builder.Services.AddOpenApi();
+
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
@@ -66,6 +76,8 @@ app.MapGet("/", () => "Student Enrollment API is running!");
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseSwagger();   // Required to generate the .json file
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();

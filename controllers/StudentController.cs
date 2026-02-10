@@ -1,8 +1,7 @@
-using Microsoft.EntityFrameworkCore;  
 using Microsoft.AspNetCore.Mvc;
-using StudentEnrollmentApi.Data;
 using StudentEnrollmentApi.Models;
-
+using StudentEnrollmentApi.Services.Interfaces; 
+using Microsoft.AspNetCore.Authorization;
 
 namespace StudentEnrollmentApi.Controllers
 {
@@ -10,68 +9,67 @@ namespace StudentEnrollmentApi.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
-        private readonly ApplicationDBContext _context;
-        public StudentController(ApplicationDBContext context)
+        // Change from Context to Service
+        private readonly IStudentService _studentService;
+
+        public StudentController(IStudentService studentService)
         {
-            _context = context;
+            _studentService = studentService;
         }
 
-        // ✅ GET: api/students
+        // ✅ GET: api/student
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Student>>> GetStudents()
         {
-            return await _context.Students.ToListAsync();
+            var students = await _studentService.GetAllStudentsAsync();
+            return Ok(students);
         }
 
-        // ✅ GET: api/students/1
+        // ✅ GET: api/student/1
         [HttpGet("{id}")]
         public async Task<ActionResult<Student>> GetStudent(int id)
         {
-            var student = await _context.Students.FindAsync(id);
+            var student = await _studentService.GetStudentByIdAsync(id);
 
             if (student == null)
                 return NotFound();
 
-            return student;
+            return Ok(student);
         }
 
-        // ✅ POST: api/students
+        // ✅ POST: api/student
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<Student>> CreateStudent(Student student)
         {
-            _context.Students.Add(student);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetStudent), new { id = student.Id }, student);
+            var createdStudent = await _studentService.CreateStudentAsync(student);
+            return CreatedAtAction(nameof(GetStudent), new { id = createdStudent.Id }, createdStudent);
         }
 
-        // ✅ PUT: api/students/1
+        // ✅ PUT: api/student/1
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> UpdateStudent(int id, Student student)
         {
-            if (id != student.Id)
-                return BadRequest("Student ID mismatch");
-
-            _context.Entry(student).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
+            var success = await _studentService.UpdateStudentAsync(id, student);
+            
+            if (!success)
+                return BadRequest("Student ID mismatch or update failed");
 
             return NoContent();
         }
 
-        // ✅ DELETE: api/students/1
+        // ✅ DELETE: api/student/1
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteStudent(int id)
         {
-            var student = await _context.Students.FindAsync(id);
+            var success = await _studentService.DeleteStudentAsync(id);
 
-            if (student == null)
+            if (!success)
                 return NotFound();
-
-            _context.Students.Remove(student);
-            await _context.SaveChangesAsync();
 
             return NoContent();
         }
     }
-    
 }

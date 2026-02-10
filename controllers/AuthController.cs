@@ -1,88 +1,40 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using StudentEnrollmentApi.Models;
 using StudentEnrollmentApi.DTOs;
+using StudentEnrollmentApi.Services.Interfaces;
 
 namespace StudentEnrollmentApi.Controllers
 {
-    [Route("api/auth")]
+    [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly UserManager<User> _userManager;
-        private readonly IConfiguration _config;
+        private readonly IAuthService _authService;
 
-        public AuthController(UserManager<User> userManager, IConfiguration config)
+        public AuthController(IAuthService authService)
         {
-            _userManager = userManager;
-            _config = config;
+            _authService = authService;
         }
 
-        // ✅ REGISTER
         [HttpPost("register")]
-        public async Task<IActionResult> Register(RegisterDto dto)
+        public async Task<IActionResult> Register([FromBody] RegisterDto model)
         {
-            var user = new User
-            {
-                UserName = dto.Username,
-                Email = dto.Email
-            };
-
-            var result = await _userManager.CreateAsync(user, dto.Password);
-
-            if (!result.Succeeded)
+            var result = await _authService.RegisterAsync(model);
+            
+            if (!result.Succeeded) 
                 return BadRequest(result.Errors);
 
-            return Ok("User registered successfully!");
+            return Ok(new { Message = "User registered successfully!" });
         }
 
-        // ✅ LOGIN
         [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginDto dto)
+        public async Task<IActionResult> Login([FromBody] LoginDto model)
         {
-            var user = await _userManager.FindByNameAsync(dto.Username);
+            var token = await _authService.LoginAsync(model);
 
-            if (user == null)
-                return Unauthorized("Invalid username");
-
-            var validPassword = await _userManager.CheckPasswordAsync(user, dto.Password);
-
-            if (!validPassword)
-                return Unauthorized("Invalid password");
-
-            var token = GenerateJwtToken(user);
+            if (token == null)
+                return Unauthorized(new { Message = "Invalid username or password" });
 
             return Ok(new { Token = token });
-        }
-
-        // ✅ TOKEN GENERATOR
-        private string GenerateJwtToken(User user)
-        {
-            var claims = new[]
-            {
-                new Claim(ClaimTypes.Name, user.UserName),
-                new Claim(ClaimTypes.NameIdentifier, user.Id)
-            };
-
-            var key = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(_config["JWT:Key"]));
-
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            var token = new JwtSecurityToken(
-                issuer: _config["JWT:Issuer"],
-                audience: _config["JWT:Audience"],
-                claims: claims,
-                expires: DateTime.Now.AddMinutes(
-                    Convert.ToDouble(_config["JWT:DurationInMinutes"])),
-                signingCredentials: creds
-            );
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }
