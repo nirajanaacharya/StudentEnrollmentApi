@@ -5,16 +5,16 @@ using StudentEnrollmentApi.Services.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using StudentEnrollmentApi.Models; // Your User class is here
+using StudentEnrollmentApi.Models; 
 
 namespace StudentEnrollmentApi.Services
 {
     public class AuthService : IAuthService
     {
-        private readonly UserManager<User> _userManager; // Corrected to User
+        private readonly UserManager<User> _userManager; 
         private readonly IConfiguration _configuration;
 
-        public AuthService(UserManager<User> userManager, IConfiguration configuration) // Corrected to User
+        public AuthService(UserManager<User> userManager, IConfiguration configuration)
         {
             _userManager = userManager;
             _configuration = configuration;
@@ -22,7 +22,6 @@ namespace StudentEnrollmentApi.Services
 
         public async Task<IdentityResult> RegisterAsync(RegisterDto model)
         {
-            // Use your custom 'User' class here instead of IdentityUser
             var user = new User { UserName = model.Username, Email = model.Email }; 
             return await _userManager.CreateAsync(user, model.Password);
         }
@@ -37,7 +36,7 @@ namespace StudentEnrollmentApi.Services
             return GenerateToken(user);
         }
 
-        private string GenerateToken(User user) // Corrected to User
+        private string GenerateToken(User user) 
         {
             var authClaims = new List<Claim>
             {
