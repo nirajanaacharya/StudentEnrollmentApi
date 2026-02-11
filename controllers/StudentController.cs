@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using StudentEnrollmentApi.Models;
 using StudentEnrollmentApi.Services.Interfaces; 
 using Microsoft.AspNetCore.Authorization;
+using StudentEnrollmentApi.DTOs; 
 
 namespace StudentEnrollmentApi.Controllers
 {
@@ -11,17 +12,20 @@ namespace StudentEnrollmentApi.Controllers
     {
         // Change from Context to Service
         private readonly IStudentService _studentService;
+        private readonly ILogger<StudentController> _logger;
 
-        public StudentController(IStudentService studentService)
+        public StudentController(IStudentService studentService, ILogger<StudentController> logger)
         {
             _studentService = studentService;
+            _logger = logger;
         }
 
-        // ✅ GET: api/student
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Student>>> GetStudents()
+        [Authorize]
+        public async Task<ActionResult<IEnumerable<Student>>> GetStudents(
+           [FromQuery] StudentQueryParameters queryParams)
         {
-            var students = await _studentService.GetAllStudentsAsync();
+            var students = await _studentService.GetAllStudentsAsync(queryParams);
             return Ok(students);
         }
 
