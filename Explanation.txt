@@ -1,0 +1,19 @@
+First i followed the standard approach for creating the Crud App using the standard db context 
+added the migration and updated the database using the ef update 
+registered the model in the program.cs first
+Created the user Model for identity Db creates the roles without specifying the getter setter
+Then Switched to identityDbcontext for the Authentication and user roles to be more convenient for the jwt and authorization
+Registered the db context for the dependency injection 
+Then created the Dto named Login and Register for the login and registration for Authentication 
+Created the Authentication Controller to generate the jwt token
+Specified the Authentication Module in the program cs using asp's Authentication 
+Then tested the authentication and token generation using the Postmen
+To make the conntroller thin , i created the services and reduced the controller workload to just routing the api not talking with the database as well
+Then added the Global exception handler for the System with it's own Dto as well 
+But i had some difficulty during setting the swagger ui for the authorization as i used the StudentApi module's Model but the new version doesn't support that 
+That took me quite a time to figure it out 
+Then After that i tested my app in the browser via swagger and it worked perfectly 
+ 
+
+
+

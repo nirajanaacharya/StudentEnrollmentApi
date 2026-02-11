@@ -29,7 +29,6 @@ namespace StudentEnrollmentApi.Controllers
             return Ok(students);
         }
 
-        // ✅ GET: api/student/1
         [HttpGet("{id}")]
         public async Task<ActionResult<Student>> GetStudent(int id)
         {
@@ -41,7 +40,7 @@ namespace StudentEnrollmentApi.Controllers
             return Ok(student);
         }
 
-        // ✅ POST: api/student
+      
         [HttpPost]
         [Authorize]
         public async Task<ActionResult<Student>> CreateStudent(Student student)
@@ -50,7 +49,7 @@ namespace StudentEnrollmentApi.Controllers
             return CreatedAtAction(nameof(GetStudent), new { id = createdStudent.Id }, createdStudent);
         }
 
-        // ✅ PUT: api/student/1
+       
         [HttpPut("{id}")]
         [Authorize]
         public async Task<IActionResult> UpdateStudent(int id, Student student)
@@ -63,7 +62,7 @@ namespace StudentEnrollmentApi.Controllers
             return NoContent();
         }
 
-        // ✅ DELETE: api/student/1
+       
         [HttpDelete("{id}")]
         [Authorize]
         public async Task<IActionResult> DeleteStudent(int id)

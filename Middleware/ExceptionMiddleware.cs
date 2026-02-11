@@ -1,6 +1,6 @@
 using System.Net;
 using System.Text.Json;
-using StudentEnrollmentApi.Models; // Ensure your ErrorResponse model is here
+using StudentEnrollmentApi.Models; 
 
 namespace StudentEnrollmentApi.Middleware;
 
