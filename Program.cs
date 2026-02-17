@@ -102,8 +102,9 @@ var app = builder.Build();
 //Registering the custom exception handling middleware
 app.UseMiddleware<ExceptionMiddleware>();
 
-// Ensurring the application is running
-app.MapGet("/", () => "Student Enrollment API is running!");
+
+// Redirect root to Swagger
+app.MapGet("/", () => Results.Redirect("/swagger"));
 
 
 if (app.Environment.IsDevelopment())

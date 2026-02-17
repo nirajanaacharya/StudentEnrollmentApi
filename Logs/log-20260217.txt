@@ -1,0 +1,18 @@
+2026-02-17 11:14:34.940 +05:45 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-17 11:14:35.043 +05:45 [INF] Now listening on: http://localhost:5111
+2026-02-17 11:14:35.047 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-17 11:14:35.048 +05:45 [INF] Hosting environment: Development
+2026-02-17 11:14:35.048 +05:45 [INF] Content root path: D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi
+2026-02-17 11:14:45.685 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-17 11:14:45.721 +05:45 [WRN] Failed to determine the https port for redirect.
+2026-02-17 11:14:48.391 +05:45 [INF] Executing endpoint 'HTTP: GET /'
+2026-02-17 11:14:48.395 +05:45 [INF] Executing RedirectResult, redirecting to /swagger.
+2026-02-17 11:14:48.396 +05:45 [INF] Executed endpoint 'HTTP: GET /'
+2026-02-17 11:14:48.407 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 302 0 null 2723.0371ms
+2026-02-17 11:14:48.445 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/swagger - null null
+2026-02-17 11:14:48.454 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/swagger - 301 0 null 11.2685ms
+2026-02-17 11:14:48.477 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/swagger/index.html - null null
+2026-02-17 11:14:48.526 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/swagger/index.html - 200 null text/html;charset=utf-8 48.6254ms
+2026-02-17 11:14:48.819 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/swagger/v1/swagger.json - null null
+2026-02-17 11:14:48.904 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.6333ms
+2026-02-17 11:17:03.373 +05:45 [INF] Application is shutting down...
