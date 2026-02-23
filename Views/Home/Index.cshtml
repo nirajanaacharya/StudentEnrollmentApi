@@ -1,0 +1,76 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model StudentEnrollmentApi.Models.StudentViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/site.css" />
+    <title>Student Management</title>
+
+</head>
+<body>
+    <h1>Student Management System</h1>
+    
+    <div>
+        <h3>Add New Student</h3>
+        <form asp-action="Index" method="post">
+            @Html.AntiForgeryToken()
+        <div>
+            <input name="Name" placeholder="Enter Student Name" value="@Model.Name" />
+        </div>
+
+        <div>
+            <input name="Email" type="email" placeholder="Enter Student Email" value="@Model.Email" />
+        </div>
+
+        <div>
+            <input name="Department" placeholder="Department" value="@Model.Department" />
+        </div>
+            
+            <button type="submit">Add Student</button>
+        </form>
+    </div>
+    
+    <div>
+        <h4>Enrolled Students (Total: @Model.Students.Count)</h4>
+        
+        @if (Model.Students.Any())
+        {
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var student in Model.Students)
+                    {
+                        <tr>
+                            <td>@student.Id</td>
+                            <td>@student.Name</td>
+                            <td>@student.Email</td>
+                            <td>@student.Department</td>
+                            <td>
+                                    <form action="/Home/Delete/@student.Id" method="post" 
+                                        onsubmit="return confirm('Are you sure?');">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit">Delete</button>
+                                    </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>No students enrolled yet.</p>
+        }
+    </div>
+
+</body>
+</html>

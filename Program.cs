@@ -61,7 +61,7 @@ builder.Services.AddAuthentication(options =>
 });
 
 // This tells that hami sangha controller chha jasle request handle garchha ra response pathauncha
-builder.Services.AddControllers(); 
+builder.Services.AddControllersWithViews(); // enable MVC pattern for API development
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -103,8 +103,10 @@ var app = builder.Build();
 app.UseMiddleware<ExceptionMiddleware>();
 
 
-// Redirect root to Swagger
-app.MapGet("/", () => Results.Redirect("/swagger"));
+
+
+// // Redirect root to Swagger
+// app.MapGet("/", () => Results.Redirect("/swagger"));
 
 
 if (app.Environment.IsDevelopment())
@@ -116,9 +118,20 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+
 app.UseHttpsRedirection();
+app.UseRouting();
+app.UseStaticFiles(); 
+
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}"
+);
+
+
 app.MapControllers();
 
 app.Run();

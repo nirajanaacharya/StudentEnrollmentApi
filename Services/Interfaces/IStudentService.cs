@@ -5,7 +5,7 @@ namespace StudentEnrollmentApi.Services.Interfaces
 {
     public interface IStudentService
     {
-        // Task<IEnumerable<Student>> GetAllStudentsAsync();
+        
 
         Task<IEnumerable<Student>> GetAllStudentsAsync(StudentQueryParameters queryParameters);
         Task<Student?> GetStudentByIdAsync(int id);
