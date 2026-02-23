@@ -1635,3 +1635,686 @@ OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
 2026-02-23 15:58:25.853 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
 2026-02-23 15:58:25.854 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 121.494ms
 2026-02-23 15:59:23.902 +05:45 [INF] Application is shutting down...
+2026-02-23 16:07:34.071 +05:45 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-23 16:07:34.221 +05:45 [INF] Now listening on: http://localhost:5111
+2026-02-23 16:07:34.224 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-23 16:07:34.225 +05:45 [INF] Hosting environment: Development
+2026-02-23 16:07:34.225 +05:45 [INF] Content root path: D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi
+2026-02-23 16:07:38.469 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:07:38.633 +05:45 [WRN] Failed to determine the https port for redirect.
+2026-02-23 16:07:39.015 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:07:39.052 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:07:39.265 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:07:39.271 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:07:40.905 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:07:40.909 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:07:42.830 +05:45 [INF] Executed DbCommand (67ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:07:42.989 +05:45 [INF] Retrieved 3 students from database
+2026-02-23 16:07:43.027 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:07:43.184 +05:45 [INF] Executed ViewResult - view Index executed in 163.2015ms.
+2026-02-23 16:07:43.191 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 4133.4332ms
+2026-02-23 16:07:43.204 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:07:43.238 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 4773.3768ms
+2026-02-23 16:07:43.426 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:07:43.471 +05:45 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi\wwwroot\css\site.css'
+2026-02-23 16:07:43.480 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 200 217 text/css 54.6127ms
+2026-02-23 16:07:47.011 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5111/ - application/x-www-form-urlencoded 207
+2026-02-23 16:07:47.026 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:07:47.103 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(StudentEnrollmentApi.Models.StudentViewModel) on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:07:47.164 +05:45 [INF] POST Index called - Attempting to create student: null
+2026-02-23 16:07:47.165 +05:45 [WRN] Model validation failed for student creation
+2026-02-23 16:07:47.166 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:07:47.254 +05:45 [INF] Executed DbCommand (3ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:07:47.260 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:07:47.270 +05:45 [INF] Executed ViewResult - view Index executed in 10.8419ms.
+2026-02-23 16:07:47.275 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 164.7951ms
+2026-02-23 16:07:47.283 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:07:47.288 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5111/ - 200 null text/html; charset=utf-8 283.524ms
+2026-02-23 16:07:47.337 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:07:47.363 +05:45 [INF] The file /css/site.css was not modified
+2026-02-23 16:07:47.365 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 304 null text/css 28.0195ms
+2026-02-23 16:07:48.461 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5111/ - application/x-www-form-urlencoded 207
+2026-02-23 16:07:48.469 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:07:48.474 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(StudentEnrollmentApi.Models.StudentViewModel) on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:07:48.495 +05:45 [INF] POST Index called - Attempting to create student: null
+2026-02-23 16:07:48.496 +05:45 [WRN] Model validation failed for student creation
+2026-02-23 16:07:48.497 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:07:48.685 +05:45 [INF] Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:07:48.691 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:07:48.696 +05:45 [INF] Executed ViewResult - view Index executed in 5.3878ms.
+2026-02-23 16:07:48.699 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 218.1109ms
+2026-02-23 16:07:48.702 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:07:48.719 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5111/ - 200 null text/html; charset=utf-8 257.7516ms
+2026-02-23 16:07:48.993 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5111/ - application/x-www-form-urlencoded 207
+2026-02-23 16:07:48.997 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:07:48.998 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(StudentEnrollmentApi.Models.StudentViewModel) on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:07:49.018 +05:45 [INF] POST Index called - Attempting to create student: null
+2026-02-23 16:07:49.019 +05:45 [WRN] Model validation failed for student creation
+2026-02-23 16:07:49.020 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:07:49.034 +05:45 [INF] Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:07:49.038 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:07:49.051 +05:45 [INF] Executed ViewResult - view Index executed in 13.5454ms.
+2026-02-23 16:07:49.275 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 258.6363ms
+2026-02-23 16:07:49.278 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:07:49.287 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5111/ - 200 null text/html; charset=utf-8 293.8442ms
+2026-02-23 16:07:49.503 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5111/ - application/x-www-form-urlencoded 207
+2026-02-23 16:07:49.517 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:07:49.519 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(StudentEnrollmentApi.Models.StudentViewModel) on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:07:49.530 +05:45 [INF] POST Index called - Attempting to create student: null
+2026-02-23 16:07:49.531 +05:45 [WRN] Model validation failed for student creation
+2026-02-23 16:07:49.533 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:07:49.550 +05:45 [INF] Executed DbCommand (7ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:07:49.565 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:07:49.568 +05:45 [INF] Executed ViewResult - view Index executed in 3.0345ms.
+2026-02-23 16:07:49.579 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 50.848ms
+2026-02-23 16:07:49.799 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:07:49.801 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5111/ - 200 null text/html; charset=utf-8 298.8725ms
+2026-02-23 16:08:54.010 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5111/ - application/x-www-form-urlencoded 207
+2026-02-23 16:08:54.021 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:08:54.023 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(StudentEnrollmentApi.Models.StudentViewModel) on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:08:54.044 +05:45 [INF] POST Index called - Attempting to create student: null
+2026-02-23 16:08:54.045 +05:45 [WRN] Model validation failed for student creation
+2026-02-23 16:08:54.048 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:08:54.073 +05:45 [INF] Executed DbCommand (8ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:08:54.088 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:08:54.095 +05:45 [INF] Executed ViewResult - view Index executed in 6.8189ms.
+2026-02-23 16:08:54.096 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 54.2123ms
+2026-02-23 16:08:54.207 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:08:54.208 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5111/ - 200 null text/html; charset=utf-8 198.0101ms
+2026-02-23 16:08:54.212 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:08:54.328 +05:45 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi\wwwroot\css\site.css'
+2026-02-23 16:08:54.341 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 200 263 text/css 129.3777ms
+2026-02-23 16:08:58.985 +05:45 [INF] Application is shutting down...
+2026-02-23 16:09:12.034 +05:45 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-23 16:09:12.208 +05:45 [INF] Now listening on: http://localhost:5111
+2026-02-23 16:09:12.213 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-23 16:09:12.215 +05:45 [INF] Hosting environment: Development
+2026-02-23 16:09:12.216 +05:45 [INF] Content root path: D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi
+2026-02-23 16:09:18.114 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:09:18.254 +05:45 [WRN] Failed to determine the https port for redirect.
+2026-02-23 16:09:18.339 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:09:18.407 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:09:19.185 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:09:19.191 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:09:20.922 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:09:20.925 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:09:21.750 +05:45 [INF] Executed DbCommand (74ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:09:21.901 +05:45 [INF] Retrieved 3 students from database
+2026-02-23 16:09:21.933 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:09:22.049 +05:45 [INF] Executed ViewResult - view Index executed in 124.5632ms.
+2026-02-23 16:09:22.072 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 3373.9694ms
+2026-02-23 16:09:22.076 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:09:22.248 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:09:22.346 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 4229.3388ms
+2026-02-23 16:09:22.354 +05:45 [INF] The file /css/site.css was not modified
+2026-02-23 16:09:22.385 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 304 null text/css 136.8892ms
+2026-02-23 16:09:25.691 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5111/ - application/x-www-form-urlencoded 207
+2026-02-23 16:09:25.706 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:09:25.778 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(StudentEnrollmentApi.Models.StudentViewModel) on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:09:25.841 +05:45 [INF] POST Index called - Attempting to create student: null
+2026-02-23 16:09:25.847 +05:45 [WRN] Model validation failed for student creation
+2026-02-23 16:09:25.849 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:09:25.938 +05:45 [INF] Executed DbCommand (5ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:09:25.943 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:09:25.954 +05:45 [INF] Executed ViewResult - view Index executed in 11.557ms.
+2026-02-23 16:09:25.956 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 174.5294ms
+2026-02-23 16:09:25.973 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:09:25.976 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5111/ - 200 null text/html; charset=utf-8 284.2174ms
+2026-02-23 16:09:26.136 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:09:26.207 +05:45 [INF] The file /css/site.css was not modified
+2026-02-23 16:09:26.208 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 304 null text/css 71.9241ms
+2026-02-23 16:11:27.335 +05:45 [INF] Application is shutting down...
+2026-02-23 16:11:36.699 +05:45 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-23 16:11:36.819 +05:45 [INF] Now listening on: http://localhost:5111
+2026-02-23 16:11:36.823 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-23 16:11:36.823 +05:45 [INF] Hosting environment: Development
+2026-02-23 16:11:36.824 +05:45 [INF] Content root path: D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi
+2026-02-23 16:11:42.865 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:11:43.028 +05:45 [WRN] Failed to determine the https port for redirect.
+2026-02-23 16:11:43.103 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:11:43.140 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:11:43.389 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:11:43.395 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:11:45.155 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:11:45.158 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:11:45.918 +05:45 [INF] Executed DbCommand (82ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:11:46.080 +05:45 [INF] Retrieved 3 students from database
+2026-02-23 16:11:46.116 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:11:46.249 +05:45 [INF] Executed ViewResult - view Index executed in 139.6447ms.
+2026-02-23 16:11:46.255 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 3110.4957ms
+2026-02-23 16:11:46.263 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:11:46.435 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:11:46.473 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 3616.7938ms
+2026-02-23 16:11:46.477 +05:45 [INF] The file /css/site.css was not modified
+2026-02-23 16:11:46.485 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 304 null text/css 50.0706ms
+2026-02-23 16:13:02.422 +05:45 [INF] Application is shutting down...
+2026-02-23 16:13:14.514 +05:45 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-23 16:13:14.678 +05:45 [INF] Now listening on: http://localhost:5111
+2026-02-23 16:13:14.684 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-23 16:13:14.685 +05:45 [INF] Hosting environment: Development
+2026-02-23 16:13:14.686 +05:45 [INF] Content root path: D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi
+2026-02-23 16:13:17.193 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:13:17.277 +05:45 [WRN] Failed to determine the https port for redirect.
+2026-02-23 16:13:17.425 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:13:17.487 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:13:17.777 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:13:17.786 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:13:19.753 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:13:19.756 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:13:21.150 +05:45 [INF] Executed DbCommand (78ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:13:21.288 +05:45 [INF] Retrieved 3 students from database
+2026-02-23 16:13:21.319 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:13:21.451 +05:45 [INF] Executed ViewResult - view Index executed in 138.3756ms.
+2026-02-23 16:13:21.525 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 4031.6766ms
+2026-02-23 16:13:21.526 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:13:21.529 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:13:21.632 +05:45 [INF] The file /css/site.css was not modified
+2026-02-23 16:13:21.645 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 304 null text/css 117.7149ms
+2026-02-23 16:13:21.672 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 4484.0227ms
+2026-02-23 16:14:23.372 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:14:23.384 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:14:23.387 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:14:23.395 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:14:23.396 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:14:23.447 +05:45 [INF] Executed DbCommand (5ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:14:23.452 +05:45 [INF] Retrieved 3 students from database
+2026-02-23 16:14:23.454 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:14:23.466 +05:45 [INF] Executed ViewResult - view Index executed in 12.5602ms.
+2026-02-23 16:14:23.469 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 77.6848ms
+2026-02-23 16:14:23.470 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:14:23.481 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 109.4805ms
+2026-02-23 16:14:23.503 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:14:23.520 +05:45 [INF] The file /css/site.css was not modified
+2026-02-23 16:14:23.527 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 304 null text/css 22.3928ms
+2026-02-23 16:14:26.010 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5111/ - application/x-www-form-urlencoded 207
+2026-02-23 16:14:26.047 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:14:26.077 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(StudentEnrollmentApi.Models.StudentViewModel) on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:14:26.127 +05:45 [INF] POST Index called - Attempting to create student: null
+2026-02-23 16:14:26.128 +05:45 [WRN] Model validation failed for student creation
+2026-02-23 16:14:26.129 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:14:26.280 +05:45 [INF] Executed DbCommand (3ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:14:26.284 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:14:26.289 +05:45 [INF] Executed ViewResult - view Index executed in 5.2638ms.
+2026-02-23 16:14:26.293 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 212.6381ms
+2026-02-23 16:14:26.302 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:14:26.304 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5111/ - 200 null text/html; charset=utf-8 293.4644ms
+2026-02-23 16:16:00.197 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5111/ - application/x-www-form-urlencoded 207
+2026-02-23 16:16:00.201 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:16:00.203 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(StudentEnrollmentApi.Models.StudentViewModel) on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:16:00.215 +05:45 [INF] POST Index called - Attempting to create student: null
+2026-02-23 16:16:00.217 +05:45 [WRN] Model validation failed for student creation
+2026-02-23 16:16:00.219 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:16:00.231 +05:45 [INF] Executed DbCommand (7ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:16:00.236 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:16:00.238 +05:45 [INF] Executed ViewResult - view Index executed in 2.3674ms.
+2026-02-23 16:16:00.241 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 34.8325ms
+2026-02-23 16:16:00.254 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:16:00.255 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5111/ - 200 null text/html; charset=utf-8 58.28ms
+2026-02-23 16:16:00.280 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:16:00.283 +05:45 [INF] The file /css/site.css was not modified
+2026-02-23 16:16:00.285 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 304 null text/css 4.5864ms
+2026-02-23 16:16:06.115 +05:45 [INF] Application is shutting down...
+2026-02-23 16:16:15.325 +05:45 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-23 16:16:15.459 +05:45 [INF] Now listening on: http://localhost:5111
+2026-02-23 16:16:15.462 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-23 16:16:15.463 +05:45 [INF] Hosting environment: Development
+2026-02-23 16:16:15.463 +05:45 [INF] Content root path: D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi
+2026-02-23 16:16:19.913 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:16:20.003 +05:45 [WRN] Failed to determine the https port for redirect.
+2026-02-23 16:16:20.129 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:16:20.194 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:16:20.404 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:16:20.410 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:16:21.898 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:16:21.901 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:16:22.651 +05:45 [INF] Executed DbCommand (76ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:16:22.802 +05:45 [INF] Retrieved 3 students from database
+2026-02-23 16:16:22.831 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:16:22.952 +05:45 [INF] Executed ViewResult - view Index executed in 121.9365ms.
+2026-02-23 16:16:22.989 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 2791.1466ms
+2026-02-23 16:16:23.044 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:16:23.105 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 3198.0831ms
+2026-02-23 16:16:43.214 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5111/ - application/x-www-form-urlencoded 246
+2026-02-23 16:16:43.234 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:16:43.313 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(StudentEnrollmentApi.Models.StudentViewModel) on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:16:43.391 +05:45 [INF] POST Index called - Attempting to create student: Nirajan
+2026-02-23 16:16:43.621 +05:45 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([Department], [Email], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2026-02-23 16:16:43.683 +05:45 [INF] Created new student: Nirajan with ID 13
+2026-02-23 16:16:43.685 +05:45 [INF] Student created successfully: Nirajan (ID: 13)
+2026-02-23 16:16:43.691 +05:45 [INF] Executing RedirectResult, redirecting to /.
+2026-02-23 16:16:43.692 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 375.9421ms
+2026-02-23 16:16:43.695 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:16:43.698 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5111/ - 302 0 null 484.488ms
+2026-02-23 16:16:43.716 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:16:43.734 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:16:43.736 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:16:43.752 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:16:43.756 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:16:43.945 +05:45 [INF] Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:16:43.949 +05:45 [INF] Retrieved 4 students from database
+2026-02-23 16:16:43.951 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:16:43.964 +05:45 [INF] Executed ViewResult - view Index executed in 13.777ms.
+2026-02-23 16:16:43.966 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 221.3184ms
+2026-02-23 16:16:43.986 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:16:44.000 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 283.8111ms
+2026-02-23 16:16:44.126 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:16:44.151 +05:45 [INF] The file /css/site.css was not modified
+2026-02-23 16:16:44.157 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 304 null text/css 29.4938ms
+2026-02-23 16:21:49.453 +05:45 [INF] Application is shutting down...
+2026-02-23 16:22:00.108 +05:45 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-23 16:22:00.298 +05:45 [INF] Now listening on: http://localhost:5111
+2026-02-23 16:22:00.302 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-23 16:22:00.305 +05:45 [INF] Hosting environment: Development
+2026-02-23 16:22:00.306 +05:45 [INF] Content root path: D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi
+2026-02-23 16:22:05.511 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:22:06.118 +05:45 [WRN] Failed to determine the https port for redirect.
+2026-02-23 16:22:06.223 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:22:06.272 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:22:06.570 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:22:06.577 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:22:08.405 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:22:08.408 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:22:10.066 +05:45 [INF] Executed DbCommand (89ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:22:10.208 +05:45 [INF] Retrieved 4 students from database
+2026-02-23 16:22:10.244 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:22:10.374 +05:45 [INF] Executed ViewResult - view Index executed in 137.6008ms.
+2026-02-23 16:22:10.389 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 4110.2207ms
+2026-02-23 16:22:10.391 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:22:10.404 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:22:10.437 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 4999.5789ms
+2026-02-23 16:22:10.464 +05:45 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi\wwwroot\css\site.css'
+2026-02-23 16:22:10.471 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 200 292 text/css 67.7193ms
+2026-02-23 16:22:38.687 +05:45 [INF] Application is shutting down...
+2026-02-23 16:22:47.187 +05:45 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-23 16:22:47.428 +05:45 [INF] Now listening on: http://localhost:5111
+2026-02-23 16:22:47.432 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-23 16:22:47.433 +05:45 [INF] Hosting environment: Development
+2026-02-23 16:22:47.433 +05:45 [INF] Content root path: D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi
+2026-02-23 16:22:49.838 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:22:49.893 +05:45 [WRN] Failed to determine the https port for redirect.
+2026-02-23 16:22:49.971 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:22:50.015 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:22:50.180 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:22:50.189 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:22:51.653 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:22:51.658 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:22:52.163 +05:45 [INF] Executed DbCommand (42ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:22:52.316 +05:45 [INF] Retrieved 4 students from database
+2026-02-23 16:22:52.338 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:22:52.437 +05:45 [INF] Executed ViewResult - view Index executed in 102.75ms.
+2026-02-23 16:22:52.448 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 2429.3745ms
+2026-02-23 16:22:52.454 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:22:52.486 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 2649.0407ms
+2026-02-23 16:22:52.551 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:22:52.600 +05:45 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi\wwwroot\css\site.css'
+2026-02-23 16:22:52.617 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 200 429 text/css 64.9733ms
+2026-02-23 16:22:56.065 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:22:56.094 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:22:56.096 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:22:56.103 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:22:56.105 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:22:56.161 +05:45 [INF] Executed DbCommand (6ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:22:56.166 +05:45 [INF] Retrieved 4 students from database
+2026-02-23 16:22:56.168 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:22:56.202 +05:45 [INF] Executed ViewResult - view Index executed in 33.8974ms.
+2026-02-23 16:22:56.216 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 116.7932ms
+2026-02-23 16:22:56.219 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:22:56.228 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 162.3142ms
+2026-02-23 16:22:56.269 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:22:56.280 +05:45 [INF] The file /css/site.css was not modified
+2026-02-23 16:22:56.282 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 304 null text/css 13.0116ms
+2026-02-23 16:23:30.792 +05:45 [INF] Application is shutting down...
+2026-02-23 16:23:40.663 +05:45 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-23 16:23:40.819 +05:45 [INF] Now listening on: http://localhost:5111
+2026-02-23 16:23:40.821 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-23 16:23:40.822 +05:45 [INF] Hosting environment: Development
+2026-02-23 16:23:40.823 +05:45 [INF] Content root path: D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi
+2026-02-23 16:23:43.297 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:23:43.348 +05:45 [WRN] Failed to determine the https port for redirect.
+2026-02-23 16:23:43.424 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:23:43.454 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:23:43.612 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:23:43.616 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:23:44.926 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:23:44.929 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:23:45.804 +05:45 [INF] Executed DbCommand (89ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:23:45.979 +05:45 [INF] Retrieved 4 students from database
+2026-02-23 16:23:46.011 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:23:46.155 +05:45 [INF] Executed ViewResult - view Index executed in 141.0229ms.
+2026-02-23 16:23:46.169 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 2708.5322ms
+2026-02-23 16:23:46.172 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:23:46.208 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:23:46.255 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 2959.6853ms
+2026-02-23 16:23:46.325 +05:45 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi\wwwroot\css\site.css'
+2026-02-23 16:23:46.380 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 200 243 text/css 171.1528ms
+2026-02-23 16:24:07.762 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:24:07.804 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:24:07.807 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:24:07.839 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:24:07.843 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:24:07.946 +05:45 [INF] Executed DbCommand (6ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:24:07.952 +05:45 [INF] Retrieved 4 students from database
+2026-02-23 16:24:07.955 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:24:08.015 +05:45 [INF] Executed ViewResult - view Index executed in 60.1389ms.
+2026-02-23 16:24:08.018 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 193.3676ms
+2026-02-23 16:24:08.021 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:24:08.045 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 283.8357ms
+2026-02-23 16:24:08.187 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:24:08.376 +05:45 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi\wwwroot\css\site.css'
+2026-02-23 16:24:08.378 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 200 263 text/css 190.9456ms
+2026-02-23 16:24:17.327 +05:45 [INF] Application is shutting down...
+2026-02-23 16:24:27.819 +05:45 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-23 16:24:28.033 +05:45 [INF] Now listening on: http://localhost:5111
+2026-02-23 16:24:28.036 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-23 16:24:28.037 +05:45 [INF] Hosting environment: Development
+2026-02-23 16:24:28.038 +05:45 [INF] Content root path: D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi
+2026-02-23 16:24:31.239 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:24:31.321 +05:45 [WRN] Failed to determine the https port for redirect.
+2026-02-23 16:24:31.439 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:24:31.526 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:24:32.223 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:24:32.352 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:24:34.234 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:24:34.237 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:24:35.076 +05:45 [INF] Executed DbCommand (85ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:24:35.266 +05:45 [INF] Retrieved 4 students from database
+2026-02-23 16:24:35.302 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:24:35.480 +05:45 [INF] Executed ViewResult - view Index executed in 175.017ms.
+2026-02-23 16:24:35.486 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 3617.0525ms
+2026-02-23 16:24:35.491 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:24:35.534 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:24:35.588 +05:45 [INF] The file /css/site.css was not modified
+2026-02-23 16:24:35.593 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 4358.6946ms
+2026-02-23 16:24:35.859 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 304 null text/css 325.0336ms
+2026-02-23 16:27:09.618 +05:45 [INF] Application is shutting down...
+2026-02-23 16:27:21.222 +05:45 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-23 16:27:21.390 +05:45 [INF] Now listening on: http://localhost:5111
+2026-02-23 16:27:21.398 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-23 16:27:21.399 +05:45 [INF] Hosting environment: Development
+2026-02-23 16:27:21.400 +05:45 [INF] Content root path: D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi
+2026-02-23 16:27:23.685 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:27:23.761 +05:45 [WRN] Failed to determine the https port for redirect.
+2026-02-23 16:27:23.856 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:27:23.892 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:27:24.143 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:27:24.149 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:27:25.422 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:27:25.424 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:27:26.259 +05:45 [INF] Executed DbCommand (110ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:27:26.463 +05:45 [INF] Retrieved 4 students from database
+2026-02-23 16:27:26.583 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:27:26.734 +05:45 [INF] Executed ViewResult - view Index executed in 201.2968ms.
+2026-02-23 16:27:26.743 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 2843.6486ms
+2026-02-23 16:27:26.746 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:27:26.835 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 3154.0836ms
+2026-02-23 16:27:26.932 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:27:26.970 +05:45 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi\wwwroot\css\site.css'
+2026-02-23 16:27:26.981 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 200 380 text/css 49.3116ms
+2026-02-23 16:28:17.523 +05:45 [INF] Application is shutting down...
+2026-02-23 16:28:32.923 +05:45 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-23 16:28:33.208 +05:45 [INF] Now listening on: http://localhost:5111
+2026-02-23 16:28:33.212 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-23 16:28:33.216 +05:45 [INF] Hosting environment: Development
+2026-02-23 16:28:33.220 +05:45 [INF] Content root path: D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi
+2026-02-23 16:28:37.187 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:28:37.238 +05:45 [WRN] Failed to determine the https port for redirect.
+2026-02-23 16:28:37.328 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:28:37.363 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:28:37.530 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:28:37.534 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:28:38.643 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:28:38.646 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:28:39.300 +05:45 [INF] Executed DbCommand (83ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:28:39.436 +05:45 [INF] Retrieved 4 students from database
+2026-02-23 16:28:39.470 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:28:39.594 +05:45 [INF] Executed ViewResult - view Index executed in 131.4643ms.
+2026-02-23 16:28:39.617 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 2249.8099ms
+2026-02-23 16:28:39.621 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:28:39.675 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:28:39.707 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 2523.3963ms
+2026-02-23 16:28:39.772 +05:45 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi\wwwroot\css\site.css'
+2026-02-23 16:28:39.777 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 200 379 text/css 101.9674ms
+2026-02-23 16:29:03.247 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5111/ - application/x-www-form-urlencoded 250
+2026-02-23 16:29:03.256 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:29:03.297 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(StudentEnrollmentApi.Models.StudentViewModel) on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:29:03.347 +05:45 [INF] POST Index called - Attempting to create student: Rim Acharya
+2026-02-23 16:29:03.601 +05:45 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([Department], [Email], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2026-02-23 16:29:03.652 +05:45 [INF] Created new student: Rim Acharya with ID 14
+2026-02-23 16:29:03.654 +05:45 [INF] Student created successfully: Rim Acharya (ID: 14)
+2026-02-23 16:29:03.657 +05:45 [INF] Executing RedirectResult, redirecting to /.
+2026-02-23 16:29:03.660 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 359.3351ms
+2026-02-23 16:29:03.663 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:29:03.665 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5111/ - 302 0 null 417.6175ms
+2026-02-23 16:29:03.675 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:29:03.687 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:29:03.690 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:29:03.706 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:29:03.710 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:29:03.945 +05:45 [INF] Executed DbCommand (4ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:29:03.949 +05:45 [INF] Retrieved 5 students from database
+2026-02-23 16:29:03.953 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:29:03.966 +05:45 [INF] Executed ViewResult - view Index executed in 13.6932ms.
+2026-02-23 16:29:03.969 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 273.717ms
+2026-02-23 16:29:03.973 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:29:03.979 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 304.0207ms
+2026-02-23 16:29:04.021 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:29:04.037 +05:45 [INF] The file /css/site.css was not modified
+2026-02-23 16:29:04.039 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 304 null text/css 18.2881ms
+2026-02-23 16:30:09.482 +05:45 [INF] Application is shutting down...
+2026-02-23 16:30:21.514 +05:45 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-23 16:30:21.656 +05:45 [INF] Now listening on: http://localhost:5111
+2026-02-23 16:30:21.663 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-23 16:30:21.665 +05:45 [INF] Hosting environment: Development
+2026-02-23 16:30:21.666 +05:45 [INF] Content root path: D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi
+2026-02-23 16:30:23.728 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:30:23.790 +05:45 [WRN] Failed to determine the https port for redirect.
+2026-02-23 16:30:23.875 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:30:23.907 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:30:24.072 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:30:24.081 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:30:25.478 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:30:25.480 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:30:26.606 +05:45 [INF] Executed DbCommand (99ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:30:26.787 +05:45 [INF] Retrieved 5 students from database
+2026-02-23 16:30:26.829 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:30:26.990 +05:45 [INF] Executed ViewResult - view Index executed in 171.4089ms.
+2026-02-23 16:30:27.007 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 3096.4336ms
+2026-02-23 16:30:27.011 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:30:27.058 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:30:27.089 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 3364.3626ms
+2026-02-23 16:30:27.207 +05:45 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi\wwwroot\css\site.css'
+2026-02-23 16:30:27.525 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 200 559 text/css 476.7757ms
+2026-02-23 16:31:26.359 +05:45 [INF] Application is shutting down...
+2026-02-23 16:31:38.087 +05:45 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-23 16:31:38.286 +05:45 [INF] Now listening on: http://localhost:5111
+2026-02-23 16:31:38.288 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-23 16:31:38.290 +05:45 [INF] Hosting environment: Development
+2026-02-23 16:31:38.290 +05:45 [INF] Content root path: D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi
+2026-02-23 16:31:41.439 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:31:41.485 +05:45 [WRN] Failed to determine the https port for redirect.
+2026-02-23 16:31:41.580 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:31:41.619 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:31:41.811 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:31:41.816 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:31:43.084 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:31:43.087 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:31:43.718 +05:45 [INF] Executed DbCommand (59ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:31:43.824 +05:45 [INF] Retrieved 5 students from database
+2026-02-23 16:31:43.846 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:31:43.937 +05:45 [INF] Executed ViewResult - view Index executed in 99.1814ms.
+2026-02-23 16:31:43.945 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 2323.6934ms
+2026-02-23 16:31:43.967 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:31:44.026 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 2589.6495ms
+2026-02-23 16:31:44.032 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:31:44.085 +05:45 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi\wwwroot\css\site.css'
+2026-02-23 16:31:44.099 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 200 585 text/css 67.2445ms
+2026-02-23 16:48:09.520 +05:45 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-23 16:48:09.667 +05:45 [INF] Now listening on: http://localhost:5111
+2026-02-23 16:48:09.670 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-23 16:48:09.672 +05:45 [INF] Hosting environment: Development
+2026-02-23 16:48:09.673 +05:45 [INF] Content root path: D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi
+2026-02-23 16:48:13.710 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 16:48:13.767 +05:45 [WRN] Failed to determine the https port for redirect.
+2026-02-23 16:48:13.877 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:48:13.926 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 16:48:14.176 +05:45 [INF] GET Index called - Loading students
+2026-02-23 16:48:14.185 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 16:48:15.668 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:48:15.695 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 16:48:18.133 +05:45 [INF] Executed DbCommand (79ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 16:48:18.278 +05:45 [INF] Retrieved 5 students from database
+2026-02-23 16:48:18.314 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 16:48:18.461 +05:45 [INF] Executed ViewResult - view Index executed in 147.8783ms.
+2026-02-23 16:48:18.466 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 4536.2433ms
+2026-02-23 16:48:18.470 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 16:48:18.493 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 4787.585ms
+2026-02-23 16:48:18.602 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 16:48:18.623 +05:45 [INF] The file /css/site.css was not modified
+2026-02-23 16:48:18.627 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 304 null text/css 24.8767ms
+2026-02-23 16:59:59.328 +05:45 [INF] Application is shutting down...
+2026-02-23 17:00:17.565 +05:45 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-23 17:00:17.681 +05:45 [INF] Now listening on: http://localhost:5111
+2026-02-23 17:00:17.683 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-23 17:00:17.684 +05:45 [INF] Hosting environment: Development
+2026-02-23 17:00:17.684 +05:45 [INF] Content root path: D:\Users\Nirajan\Desktop\Dot Net Assignment\StudentEnrollmentApi
+2026-02-23 17:00:23.808 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/ - null null
+2026-02-23 17:00:23.885 +05:45 [WRN] Failed to determine the https port for redirect.
+2026-02-23 17:00:26.535 +05:45 [INF] Executing endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 17:00:26.578 +05:45 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller StudentEnrollmentApi.Controllers.HomeController (StudentEnrollmentApi).
+2026-02-23 17:00:27.134 +05:45 [INF] GET Index called - Loading students
+2026-02-23 17:00:27.139 +05:45 [INF] Searching students. Name: All, Dept: All, Page: 1
+2026-02-23 17:00:29.061 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 17:00:29.064 +05:45 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-23 17:00:31.424 +05:45 [INF] Executed DbCommand (213ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Department], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+2026-02-23 17:00:31.601 +05:45 [INF] Retrieved 5 students from database
+2026-02-23 17:00:31.635 +05:45 [INF] Executing ViewResult, running view Index.
+2026-02-23 17:00:31.752 +05:45 [INF] Executed ViewResult - view Index executed in 117.9445ms.
+2026-02-23 17:00:31.755 +05:45 [INF] Executed action StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi) in 5171.7802ms
+2026-02-23 17:00:31.757 +05:45 [INF] Executed endpoint 'StudentEnrollmentApi.Controllers.HomeController.Index (StudentEnrollmentApi)'
+2026-02-23 17:00:31.796 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/ - 200 null text/html; charset=utf-8 7989.9814ms
+2026-02-23 17:00:31.872 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5111/css/site.css - null null
+2026-02-23 17:00:31.887 +05:45 [INF] The file /css/site.css was not modified
+2026-02-23 17:00:31.891 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5111/css/site.css - 304 null text/css 17.9995ms
+2026-02-23 17:39:12.673 +05:45 [INF] Application is shutting down...

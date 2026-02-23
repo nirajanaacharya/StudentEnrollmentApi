@@ -5,72 +5,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
     <title>Student Management</title>
 
 </head>
 <body>
     <h1>Student Management System</h1>
     
-    <div>
+    <div class="form-container">
         <h3>Add New Student</h3>
-        <form asp-action="Index" method="post">
+        <form asp-action="Index" method="post" class ="student-form">
             @Html.AntiForgeryToken()
         <div>
-            <input name="Name" placeholder="Enter Student Name" value="@Model.Name" />
+            <input class="input-name" name="Name" placeholder="Enter Student Name" value="@Model.Name" />
         </div>
 
         <div>
-            <input name="Email" type="email" placeholder="Enter Student Email" value="@Model.Email" />
+            <input class="input-email" name="Email" type="email" placeholder="Enter Student Email" value="@Model.Email" />
         </div>
 
         <div>
-            <input name="Department" placeholder="Department" value="@Model.Department" />
-        </div>
+            <input class="input-department" name="Department" placeholder="Department" value="@Model.Department" />
+        </div >
             
-            <button type="submit">Add Student</button>
+            <button type="submit" class = "submit-btn1">Add Student</button>
         </form>
     </div>
     
     <div>
         <h4>Enrolled Students (Total: @Model.Students.Count)</h4>
-        
         @if (Model.Students.Any())
         {
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Department</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var student in Model.Students)
-                    {
-                        <tr>
-                            <td>@student.Id</td>
-                            <td>@student.Name</td>
-                            <td>@student.Email</td>
-                            <td>@student.Department</td>
-                            <td>
-                                    <form action="/Home/Delete/@student.Id" method="post" 
-                                        onsubmit="return confirm('Are you sure?');">
-                                        @Html.AntiForgeryToken()
-                                        <button type="submit">Delete</button>
-                                    </form>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+            <div class="student-grid">
+                @foreach (var student in Model.Students)
+                {
+                    <ul class="student-card">
+                        <li>
+                            <span class="label">ID: </span>
+                            #@student.Id
+                        </li>
+                        <li>
+                            <span class="label">Name: </span>
+                            <strong>@student.Name</strong>
+                        </li>
+                        <li>
+                            <span class="label">Email: </span>
+                            @student.Email
+                        </li>
+                        <li>
+                            <span class="label">Department: </span>
+                            @student.Department
+                        </li>
+                        <li>
+                            <form action="/Home/Delete/@student.Id" method="post" 
+                                onsubmit="return confirm('Are you sure you want to delete @student.Name?');">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn-delete">Delete Student</button>
+                            </form>
+                        </li>
+                    </ul>
+                }
+            </div>
         }
         else
         {
             <p>No students enrolled yet.</p>
         }
-    </div>
+            </div>
 
 </body>
 </html>
